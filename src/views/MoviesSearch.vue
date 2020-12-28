@@ -1,21 +1,21 @@
 
 <template>
   <div class="home">
-    <h1>Movie Search</h1>
+    <h1>Movie Ttitle Search</h1>
 
     <input type="text" v-model="input">
     <button type="button" v-on:click="moviesSearch()" >
       Search
     </button>
 
-    <p>{{ input }}</p>
-    <p>{{ searches }}</p>
+    <!-- <p>{{ input }}</p>
+    <p>{{ searches }}</p> -->
 
     <div v-for="movie in searches">
       <router-link v-bind:to="`/movies/${movie.imdb_id}`">
         <h1>{{ movie.title }}</h1>
       </router-link>
-      <h1>{{ movie.title }}</h1>
+      <!-- <h1>{{ movie.title }}</h1> -->
       <p>{{ movie.release_year }}</p>
     </div>
   </div>
