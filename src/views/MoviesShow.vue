@@ -9,6 +9,9 @@
       <p>{{ movie.description }}</p>
       <p>Thumbs up: {{ movie.thumbs_up }}</p>
       <p>Thumbs down: {{ movie.thumbs_down }}</p>
+
+      <button v-on:click="thumbsUp()">Thumbs Up!</button>
+      <button v-on:click="thumbsDown()">Thumbs Down!</button>
   </div>
 </template>
 
@@ -36,6 +39,30 @@ export default {
         this.movie = response.data;
         console.log(this.movie);
       });
+    },
+    thumbsUp: function (movie) {
+      var params = {
+        params: { thumbs: "up" },
+      };
+      axios
+        .patch(`/api/movies/${this.movie.imdb_id}`, null, {
+          params: { thumbs: "up" },
+        })
+        .then((response) => {
+          this.movie.thumbs_up += 1;
+        });
+    },
+    thumbsDown: function (movie) {
+      var params = {
+        params: { thumbs: "up" },
+      };
+      axios
+        .patch(`/api/movies/${this.movie.imdb_id}`, null, {
+          params: { thumbs: "down" },
+        })
+        .then((response) => {
+          this.movie.thumbs_down += 1;
+        });
     },
   },
 };
