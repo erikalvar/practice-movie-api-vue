@@ -3,7 +3,9 @@
     <h1>Movie Rater</h1>
 
     <div v-for="movie in movies">
-      <img :src="movie.image">
+      <router-link v-bind:to="`/movies/${movie.imdb_id}`">
+        <img :src="movie.image">
+      </router-link>
       <h1>{{ movie.title }}</h1>
       <p>{{ movie.release_year }}</p>
       <p>{{ movie.description }}</p>
