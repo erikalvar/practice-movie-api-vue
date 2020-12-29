@@ -1,24 +1,5 @@
 <template>
   <div class="home">
-    <!-- <div v-for="movie in movies">
-      <router-link v-bind:to="`/movies/${movie.imdb_id}`">
-        <img :src="movie.image" />
-      </router-link>
-      <h1>{{ movie.title }}</h1>
-      <p>{{ movie.release_year }}</p> -->
-      <!-- <p>{{ movie.description }}</p> -->
-      <!-- <p>Thumbs Up: {{ movie.thumbs_up }}</p>
-      <p>Thumbs Up: {{ movie.thumbs_down }}</p> -->
-      <!-- <p>
-        <button v-on:click="thumbsUp(movie)">Thumbs Up</button>:
-        {{ movie.thumbs_up }}
-      </p>
-      <p>
-        <button v-on:click="thumbsDown(movie)">Thumbs Down</button>:
-        {{ movie.thumbs_down }}
-      </p>
-    </div> -->
-
     <div class="container">
       <div class="row row-cols-1 row-cols-md-3 " >
         <div class="col mb-4 text-center " v-for="movie in movies">

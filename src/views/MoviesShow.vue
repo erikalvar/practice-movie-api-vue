@@ -1,17 +1,19 @@
 <template>
   <div class="movies-show">
-    <h1>Movie Details</h1>
+    <div class="container">
+      <h1>Movie Details</h1>
 
-   
-      <img :src="movie.image">
-      <h1>{{ this.movie.title }}</h1>
-      <p>{{ movie.release_year }}</p>
-      <p>{{ movie.description }}</p>
-      <p><button v-on:click="thumbsUp()">Thumbs Up</button>: {{ movie.thumbs_up }}</p>
-      <p><button v-on:click="thumbsDown()">Thumbs Down</button>: {{ movie.thumbs_down }}</p>
+    
+        <img :src="movie.image">
+        <h1>{{ this.movie.title }}</h1>
+        <p>{{ movie.release_year }}</p>
+        <p>{{ movie.description }}</p>
+        <p><button v-on:click="thumbsUp()">Thumbs Up</button>: {{ movie.thumbs_up }}</p>
+        <p><button v-on:click="thumbsDown()">Thumbs Down</button>: {{ movie.thumbs_down }}</p>
 
-      <!-- <button v-on:click="thumbsUp()">Thumbs Up!</button>
-      <button v-on:click="thumbsDown()">Thumbs Down!</button> -->
+        <!-- <button v-on:click="thumbsUp()">Thumbs Up!</button>
+        <button v-on:click="thumbsDown()">Thumbs Down!</button> -->
+      </div>
   </div>
 </template>
 
