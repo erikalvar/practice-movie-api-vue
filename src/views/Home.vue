@@ -1,20 +1,23 @@
 <template>
   <div class="home">
     <div class="container">
-      <div class="row row-cols-1 row-cols-md-3 " >
+      <div class="row row-cols-1 row-cols-md-3 ">
         <div class="col mb-4 text-center " v-for="movie in movies">
           <div class="card h-100 border-0">
             <router-link v-bind:to="`/movies/${movie.imdb_id}`">
               <img :src="movie.image" />
             </router-link>
             <div class="card-body">
-              <h5 class="card-title">{{ movie.title }}</h5>
-              <h7 class="card-title">{{ movie.release_year }}</h7>
-              <p class="card-text">
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
+              <h3 class="card-title">{{ movie.title }}</h3>
+              <h6 class="card-title">{{ movie.release_year }}</h6>
+              <h6>
+                <button type="button" class="btn btn-secondary" v-on:click="thumbsUp(movie)">Thumbs Up</button>:
+                {{ movie.thumbs_up }}
+              </h6>
+              <h6>
+                <button type="button" class="btn btn-secondary" v-on:click="thumbsDown(movie)">Thumbs Down</button>:
+                {{ movie.thumbs_down }}
+              </h6>
             </div>
           </div>
         </div>
