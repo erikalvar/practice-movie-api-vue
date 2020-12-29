@@ -1,9 +1,10 @@
 <template>
   <div id="app">
     <div id="nav">
-      <h1>Movie Rater App</h1>
+      <h1>Movie Rating App</h1>
       <router-link to="/">Home</router-link> |
-      <router-link to="/search">Search Movies</router-link>
+      <router-link to="/search">Search Movies</router-link> |
+      <router-link to="/about">About</router-link>
     </div>
     <router-view/>
   </div>
